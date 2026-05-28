@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="AckPost">
+  <rect width="64" height="64" rx="14" fill="#06231c"/>
+  <path d="M17 18h30v24H17z" fill="#ecfdf5"/>
+  <path d="M22 24h20v4H22zm0 8h15v4H22z" fill="#0f766e"/>
+  <path d="m18 43 11-8 8 5 11-16v21H18z" fill="#10b981"/>
+  <path d="m18 43 11-8 8 5 11-16" fill="none" stroke="#011611" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
