@@ -1,0 +1,56 @@
+{
+  "name": "n8n-nodes-ackpost",
+  "version": "0.1.0",
+  "description": "AckPost community nodes for approval-safe social publishing automation in n8n.",
+  "license": "MIT",
+  "homepage": "https://ackpost.com/integrations/n8n",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ayojeges/ackpost-n8n-nodes-ackpost.git"
+  },
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "ackpost",
+    "social-media",
+    "publishing",
+    "approval-workflow",
+    "content-automation"
+  ],
+  "author": {
+    "name": "AckPost",
+    "url": "https://ackpost.com"
+  },
+  "main": "dist/nodes/AckPost/AckPost.node.js",
+  "types": "dist/nodes/AckPost/AckPost.node.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node -e \"const fs=require('fs');fs.mkdirSync('dist/nodes/AckPost',{recursive:true});fs.copyFileSync('nodes/AckPost/ackpost.svg','dist/nodes/AckPost/ackpost.svg')\"",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "prepack": "npm run clean && npm run build"
+  },
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/AckPostApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/AckPost/AckPost.node.js"
+    ]
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.0",
+    "n8n-workflow": "^2.16.0",
+    "typescript": "^5.9.3"
+  },
+  "overrides": {
+    "lodash": "^4.17.24",
+    "uuid": "^11.1.1"
+  }
+}
